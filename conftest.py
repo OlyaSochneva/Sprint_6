@@ -11,7 +11,7 @@ from pages.order_page import OrderPage
 @pytest.fixture(scope="function")
 def driver():
     my_options = Options()
-    service = Service(executable_path="/Users/olyasochneva/Downloads/WebDriverF/bin/geckodriver")
+    service = Service(executable_path="./driver")
     my_options.add_argument("--width=1920")
     my_options.add_argument("--height=1080")
     driver = webdriver.Firefox(options=my_options, service=service)

@@ -13,10 +13,10 @@ from data import User
 class TestOrderPage:
     @pytest.mark.parametrize(
         "button, user",
-    [
-        (CommonHeaderLocators.HEADER_ORDER_BUTTON, User.FIRST_DATA_SET),
-        (MainPageLocators.ORDER_BUTTON, User.SECOND_DATA_SET)
-    ])
+        [
+            (MainPageLocators.ORDER_BUTTON, User.FIRST_DATA_SET),
+            (CommonHeaderLocators.HEADER_ORDER_BUTTON, User.SECOND_DATA_SET)
+        ])
     @allure.title('Проверка: при прохождении всего позитивного сценария с корректными данными заказ успешно создаётся')
     def test_create_order(self, main_page, order_page, button, user):
         main_page.click_on_order_button(button)
